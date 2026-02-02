@@ -1,21 +1,17 @@
-function celebrate() {
-    // Simple alert for the hype, but you could add confetti!
-    const messages = [
-        "Hadiya is the GOAT!",
-        "20 days down, a lifetime to go! 🥂",
-        "Best friend energy: 100% ⚡",
-        "Upgrade Successful: Hadiya > Everyone Else"
-    ];
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '🌸'; // You can change this to 💖 or ✨
     
-    const randomMsg = messages[Math.floor(Math.random() * messages.length)];
-    alert(randomMsg);
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    
+    document.getElementById('heart-container').appendChild(heart);
+    
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
 }
 
-// Logic to keep the days counting if you want it live
-// Set your friendship start date here
-const startDate = new Date("2026-01-13"); // Example: 20 days ago from Feb 2
-const today = new Date();
-const diffTime = Math.abs(today - startDate);
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-document.getElementById('days-count').innerText = diffDays;
+// Create a heart every 500ms
+setInterval(createHeart, 500);
