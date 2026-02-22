@@ -3,34 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Madammm Jii ✨</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Welcome Back, Queen</title>
+    <style>
+        :root {
+            --pink: #ffafcc;
+            --blue: #a2d2ff;
+            --gold: #f9d71c;
+            --white: #ffffff;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--pink), var(--blue));
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #444;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+            border: 5px solid var(--white);
+        }
+
+        h1 {
+            color: #ff5c8d;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            background: var(--gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 0 #d4b817;
+        }
+
+        .message {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .pet-area {
+            background: #f0faff;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px 0;
+            border: 2px dashed var(--blue);
+        }
+
+        .gift-button {
+            background: #ff5c8d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-weight: bold;
+        }
+
+        .gift-button:hover {
+            transform: scale(1.05);
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="heart-bg" id="heart-container"></div>
-    
+
     <div class="card">
-        <div class="header">
-            <span class="sparkle">✨</span>
-            <h1>Hadiya</h1>
-            <span class="sparkle">✨</span>
+        <div class="status-badge">👑 QUEEN'S RECOVERY HUB</div>
+        <h1>Welcome Back, Anaya!</h1>
+        
+        <p class="message">
+            The surgery is over and you did great! 🌟 <br>
+            Take your time to heal. Your "best friend" (and the Roblox servers) missed you.
+        </p>
+
+        <div class="pet-area">
+            <p><strong>Upcoming Surgery Rewards:</strong></p>
+            <ul style="list-style: none; padding: 0;">
+                <li>✨ 800 Robux Eidi</li>
+                <li>🏆 New MM2 Knife?</li>
+                <li>🐘 That Dream Adopt Me Pet</li>
+            </ul>
         </div>
 
-        <div class="message-box">
-            <p>
-                To Hadiya, honestly, it’s crazy how in just 2 weeks you’ve become such an 
-                essential part of my life. Some people stay for years and never truly "get" you, like anaya who lived 10 years
-                but with you, it just clicked. You're the best replacement I could have ever 
-                asked for, and I'm so glad you're here now. Thanks for being the amazing 
-                person you are here's to many more days of us being chaotic! 🌸
-            </p>
-        </div>
-
-        <div class="footer">
-            <p>Made Byy Abdullahhhhhh</p>
-        </div>
+        <button class="gift-button" onclick="celebrate()">Click for Good Vibes!</button>
+        
+        <p style="font-size: 0.8em; margin-top: 20px; color: #888;">
+            <i>"I kept my word. I stayed in my lane and kept you in my prayers."</i>
+        </p>
     </div>
 
-    <script src="script.js"></script>
+    <canvas id="confetti-canvas"></canvas>
+
+    <script>
+        function celebrate() {
+            alert("Stay Strong, Queen! Your Eidi is waiting for you whenever you're ready to play! 💖");
+            // You can add a simple confetti effect here or just this sweet message
+        }
+    </script>
 </body>
 </html>
